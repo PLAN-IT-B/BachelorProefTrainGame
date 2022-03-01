@@ -19,6 +19,7 @@ int Drukknop::bepaalZone(int x, int y){
     if(300<=hoek<330) zone=8;
     if(330<=hoek<=359) zone=9;   
     if(deadZone(x,y)) zone = 0;
+    else zone = -1;
     return zone;
 
 }
