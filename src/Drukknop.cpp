@@ -1,10 +1,13 @@
 #include "Drukknop.h"
+#define M_PI		3.14159265358979323846
 #include <math.h>
 
-int Drukknop::bepaalZone(int x, int y){
+
+/*double Drukknop::bepaalZone(int x, int y){
     x=-2000;
     y=-2000;
-    double hoek= atan(y/x);
+    double rad= atan(y/x);
+    double hoek=(rad/M_PI)*360;
     int zone;
     if(0<=hoek<30) zone=10;
     if(30<=hoek<60) zone=11;
@@ -19,11 +22,14 @@ int Drukknop::bepaalZone(int x, int y){
     if(300<=hoek<330) zone=8;
     if(330<=hoek<=359) zone=9;   
     if(deadZone(x,y)) zone = 0;
-    return zone;
+    return hoek;
 
-}
+} */
+
 
 bool Drukknop::deadZone(int x, int y){
+    x=-2000;
+    y=-2000;
     double afst= sqrt(x*x+y*y);
     return afst>afstand_deadzone;
 }
