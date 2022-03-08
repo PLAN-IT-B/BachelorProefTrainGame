@@ -22,9 +22,14 @@
     if(300<=hoek<330) zone=8;
     if(330<=hoek<=359) zone=9;   
     if(deadZone(x,y)) zone = 0;
+<<<<<<< HEAD
     return hoek;
 
 } */
+=======
+    else zone = -1;
+    return zone;
+>>>>>>> 98fb19ce7457df0af03b6d1cd34979562a205bd2
 
 
 bool Drukknop::deadZone(int x, int y){

@@ -13,6 +13,7 @@ int knop;
 float hoek;
 #include <math.h>
 
+<<<<<<< HEAD
 
 void setup() { 
   // put your setup code here, to run once:
@@ -23,20 +24,41 @@ void setup() {
   pinMode(13,INPUT);
   pinMode(14,INPUT);
   
+=======
+Drukknop *d1;
+int zone;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  
+  pinMode(12,INPUT);
+  pinMode(13,INPUT);
+  pinMode(14,INPUT);
+>>>>>>> 98fb19ce7457df0af03b6d1cd34979562a205bd2
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
   
+<<<<<<< HEAD
   delay(1000);
   x = analogRead(14);
   y = analogRead(12);
   knop = analogRead(13);
+=======
+  x = analogRead(12);
+  y = analogRead(13);
+  knop = analogRead(14);
+  zone = d1->bepaalZone(x,y);
+
+>>>>>>> 98fb19ce7457df0af03b6d1cd34979562a205bd2
   Serial.print(x);
   Serial.print("  ");
   Serial.print(y);
   Serial.print("  ");
   Serial.print(knop);
+<<<<<<< HEAD
   Serial.print(" ");
   
   
@@ -83,5 +105,12 @@ if(1365<=x<=2730 && y<1365) {Serial.print("Zone 7");}
 if(1365<x && y>2730) {Serial.print("Zone 4");}
 if(1365<x && 1365<y<2730) {Serial.print("Zone 5");}
 if(1365<x && y<1365) {Serial.print("Zone 6");}
+=======
+  Serial.print("  ");
+  Serial.print(zone);
+  Serial.println("  ");
+  delay(1000);
+   
+>>>>>>> 98fb19ce7457df0af03b6d1cd34979562a205bd2
 
   */
